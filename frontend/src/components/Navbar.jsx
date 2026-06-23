@@ -17,14 +17,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between text-sm pt-2 pb-0 border-b border-b-gray-400'>
-      <div className="w-28 h-28 overflow-hidden">
-        <img
-          onClick={() => navigate('/')}
-          src={assets.logo || '/fallback-logo.png'}
-          alt="Logo"
-          className="w-full h-full object-cover object-center cursor-pointer"
-        />
-      </div>
+      <h1 onClick={() => navigate('/')} className='text-2xl font-bold text-primary cursor-pointer'>MediBook</h1>
 
       <ul className='hidden md:flex items-start gap-5 font-medium'>
         <li className='pb-0.5'>
@@ -46,7 +39,7 @@ const Navbar = () => {
         {/* ✅ Admin Panel Button - show only on home page  */}
         {location.pathname === '/' && (
           <button
-            onClick={() => window.open('https://appointy-six.vercel.app', '_blank')}
+            onClick={() => window.open('https://MediBook-six.vercel.app', '_blank')}
             className='bg-primary text-white text-xs px-4 py-2 rounded-full hover:bg-gray-700 hidden md:block'
           >
             Admin Panel
@@ -79,7 +72,7 @@ const Navbar = () => {
         {/* ---- Mobile Menu ---- */}
         <div className={`md:hidden ${showMenu ? 'fixed w-full' : 'h-0 w-0'} right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
           <div className='flex items-center justify-between px-5 py-6'>
-            <img src={assets.logo} className='w-36' alt="" />
+            <h1 className='text-2xl font-bold text-primary cursor-pointer'>MediBook</h1>
             <img onClick={() => setShowMenu(false)} src={assets.cross_icon} className='w-7' alt="" />
           </div>
           <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
